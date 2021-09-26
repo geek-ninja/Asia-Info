@@ -19,6 +19,8 @@ https://restcountries.com/v3/region/asia
   
   ![](1.png)
   
+  ![](0.png)
+  
   ![](2.png)
   
   ![](3.png)
@@ -59,6 +61,23 @@ https://restcountries.com/v3/region/asia
   <p>After installations of the packages replace the src folder with your react app created </p>
   <h3>npm run build</h3>
   <p>The above command will build the final project</p>
+  
+  
+  <h2>Important Code Snippet</h2>
+  <p>Fetching data from api</p>
+  
+  ```javascript
+     import axios from 'axios';
+  
+     const [countries,setCountries] = useState([])
+  
+     useEffect(() => {
+        axios.get('https://restcountries.com/v3/region/asia').then((data) => {
+            setCountries(data.data)
+        })
+    }, [])
+  
+  ```
  
 <h2>Hosting in Firebase</h2>
   <p>Creat your firebase account then in command line use the following commands</p>
@@ -67,4 +86,7 @@ https://restcountries.com/v3/region/asia
   <p>firebase init</p>
   <p>Select existing project and choose the project name that you have created in firebase website</p>
   <p>Then type 'y' for yes and then then type 'build' to create the host</p>
+  
+  
+  <h2>Happy Coding and feel free to contribute to this repo </h2>
   
