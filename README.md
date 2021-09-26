@@ -21,6 +21,8 @@ https://restcountries.com/v3/region/asia
   
   ![](2.png)
   
+  ![](3.png)
+  
 <h2>How To Run</h2>
 <h3>Command</h3>
 <h3>npx create-react-app your_project_name(asiainfo)</h3>
@@ -53,7 +55,8 @@ https://restcountries.com/v3/region/asia
   },
   ```
   
-    <p>After installations of the packages replace the src folder with your react app created </p>
+  
+  <p>After installations of the packages replace the src folder with your react app created </p>
   <h3>npm run build</h3>
   <p>The above command will build the final project</p>
  
