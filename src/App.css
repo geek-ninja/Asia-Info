@@ -1,0 +1,29 @@
+.app{
+    background-color: #F5F6FA;
+}
+.app-header{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 15px;
+    color:#F67602;
+    font-weight: 600;
+}
+.app-country-list> h2{
+    text-align: center;
+    margin-bottom: 15px;
+    color: #FA5B87;
+    font-weight: 900;
+}
+.MuiSvgIcon-root{
+    animation: rotation 5s infinite linear;
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
