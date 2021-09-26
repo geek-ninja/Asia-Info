@@ -19,9 +19,15 @@ https://restcountries.com/v3/region/asia
   
   ![](1.png)
   
+  <h2>Interactive Map is implemented with zoom-in and zoom-out feature</h2>
+    
   ![](0.png)
   
+  <h2>Click on the flag components to see more details about the country</h2>
+  
   ![](2.png)
+  
+  <h2>At the end refresh button is given to refresh the data from the api</h2>
   
   ![](3.png)
   
@@ -78,6 +84,35 @@ https://restcountries.com/v3/region/asia
     }, [])
   
   ```
+  
+<p>Refreshing data from the api</p>
+  
+```javascript
+function CountryList() {
+
+    const [loadingData, setLoadingData] = useState(false);
+
+    const refresh = async () => {
+        setLoadingData(true);
+        const response = await fetch("https://restcountries.com/v3/region/asia");
+        const data = await response.json();
+        console.log(data);
+        setCountries(data);
+        setLoadingData(false);
+    };
+
+    return (
+        <div className = 'countrylist'>
+            <div className = 'country-refresh'>
+            {!loadingData && <Button variant="contained" color="secondary" onClick = {refresh}><strong>Refresh Data</strong></Button>}
+            {loadingData && <strong><span>Loading...</span></strong>}
+            </div>
+        </div>
+    )
+}
+  
+```
+  
  
 <h2>Hosting in Firebase</h2>
   <p>Creat your firebase account then in command line use the following commands</p>
